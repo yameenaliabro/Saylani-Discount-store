@@ -1,0 +1,13 @@
+.conta{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.conta h1{
+    color: rgba(0, 128, 0, 0.752);
+}
+.conta p{
+    color: rgba(0, 0, 255, 0.671);
+}
