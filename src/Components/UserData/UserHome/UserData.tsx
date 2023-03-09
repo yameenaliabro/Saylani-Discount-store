@@ -1,6 +1,7 @@
 import Card2 from "../Card/Card"
 import Flex from "../Card2/Card2"
 import Slider from "../Carousel/Carousel"
+import UserCart from "../UserCart/UserCart"
 import Text from "../UserText/UserText"
 import "./User.css"
 function UserData(){

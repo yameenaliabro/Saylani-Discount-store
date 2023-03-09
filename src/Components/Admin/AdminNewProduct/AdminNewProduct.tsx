@@ -15,7 +15,9 @@ return(
            flexDirection : "column",
         }}>
         <Upload>
-           <Button><CameraOutlined/></Button>
+           <Button>
+            <CameraOutlined/>
+            </Button>
             </Upload>
             <Form.Item>
             <Input type="text" placeholder="Item Name"/>
@@ -37,9 +39,7 @@ return(
           <Form.Item>
             <Button type="primary" >AddProduct</Button>
           </Form.Item>
-          </Form>
-
-
+          </Form> 
     </div>
 )
 }

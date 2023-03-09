@@ -6,7 +6,7 @@ import { useState,useRef } from "react";
 import Text from "./Text";
 import { UserOutlined } from "@ant-design/icons";
 import { MessageOutlined, PhoneOutlined } from "@ant-design/icons/lib/icons";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
 const auth = getAuth(app);
 function UserAuth(){
@@ -27,7 +27,6 @@ createUserWithEmailAndPassword(auth,email,pasword).then(()=>{
     setspin(false)
          message.error(" Some thing Went Wrong please try again")
 })
-
 try {
     const docRef = await addDoc(collection(db, "users"), {
       Name : Name,

@@ -2,10 +2,11 @@ import {getAuth,signInWithEmailAndPassword} from "firebase/auth";
 import  {app,} from "../Firebase/Firebase"
 import {Button, Form, Input, InputRef, message, Spin} from "antd"
 import { useState,useRef } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import "./SignUp.css"
 const auth = getAuth(app);
 function SignIn(){
+    let route = useNavigate();
     let ref1 = useRef<InputRef>(null)
     let ref2 = useRef<InputRef>(null)
     let[spin,setspin] = useState(false);
@@ -14,10 +15,12 @@ function SignIn(){
     let email  = ref1.current!.input!.value
     let pasword = ref2.current!.input!.value 
 signInWithEmailAndPassword(auth,email,pasword).then(()=>{
-    setspin(false);    
+    setspin(false); 
+    console.log(email,pasword); 
+    route("/Admin")  ;
 }).catch(()=>{
     setspin(false)
-         message.error(" Some thing Went Wrong please try again")
+    console.log("user not found")
 })
 }
 return(

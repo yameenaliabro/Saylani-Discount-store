@@ -8,15 +8,14 @@ import { addToCart } from "../Reduxe/Slice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function Flex() {
-    const [productsData, setProductsData] = useState([
-        { name: "item1", price: "000" , key: 1},
-        { name: "item2", price: "000" , key: 2},
-        { name: "item3", price: "000" , key: 3}
-    ]);
+        const [productsData, setProductsData] = useState([
+            { name: "item1", price: "000" , key: 1},
+            { name: "item2", price: "000" , key: 2},
+            { name: "item3", price: "000" , key: 3} 
+        ]);
     const prDt = useSelector(state => state.product)
     const dispatch = useDispatch()
     const addtocart = (item) => {
-
         dispatch(addToCart(item))
         toast('Product Added to Cart!', {
             position: "top-right",
@@ -71,7 +70,6 @@ function Flex() {
 
                     })
                 }
-
             </Row>
             <ToastContainer
                 position="top-right"
